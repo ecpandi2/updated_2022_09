@@ -180,20 +180,20 @@ output "aws_account_id" {
   value = data.aws_caller_identity.current.account_id
 }
 
-# output "ebs_csi_iam_policy" {
-#   value = data.http.ebs_csi_iam_policy.body
-# }
+output "ebs_csi_iam_policy" {
+  value = data.http.ebs_csi_iam_policy.body
+}
 
-# output "ebs_csi_iam_role_arn" {
-#   description = "EBS CSI IAM Role ARN"
-#   value = aws_iam_role.ebs_csi_iam_role.arn
-# }
+output "ebs_csi_iam_role_arn" {
+  description = "EBS CSI IAM Role ARN"
+  value = aws_iam_role.ebs_csi_iam_role.arn
+}
 
-# # EBS CSI Helm Release Outputs
-# output "ebs_csi_helm_metadata" {
-#   description = "Metadata Block outlining status of the deployed release."
-#   value = helm_release.ebs_csi_driver.metadata
-# }
+# EBS CSI Helm Release Outputs
+output "ebs_csi_helm_metadata" {
+  description = "Metadata Block outlining status of the deployed release."
+  value = helm_release.ebs_csi_driver.metadata
+}
 
 # output "lbc_iam_policy" {
 #   value = data.http.lbc_iam_policy.body
