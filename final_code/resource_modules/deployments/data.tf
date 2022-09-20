@@ -6,7 +6,7 @@ locals {
     owners = local.owners
     environment = local.environment
   }
-  eks_cluster_name = "${local.name}-${data.terraform_remote_state.eks.outputs.cluster_id}"  
+ # eks_cluster_name = "${local.name}-${data.terraform_remote_state.eks.outputs.cluster_id}"  
 } 
 
 #Resource: Service Account, ClusteRole, ClusterRoleBinding
